@@ -7,6 +7,7 @@ import com.google.gson.JsonArray;
 /**
  * @author liangjing
  * this is a test
+ * be happy
  */
 public class MainWork {
 	public static final Gson GSON = new GsonBuilder().create();
