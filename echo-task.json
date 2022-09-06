@@ -1,0 +1,32 @@
+{
+  "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/echo-task",
+          "awslogs-region": "ap-southeast-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "portMappings": [
+        {
+          "protocol": "tcp",
+          "containerPort": 9099
+        }
+      ],
+      "cpu": 256,
+      "memory": 512,
+      "image": "ghcr.io/ungle/echotester:1.0.0",
+      "essential": true,
+      "name": "echo-tester"
+    }
+  ],
+  "requiresCompatibilities": [
+      "FARGATE"
+   ], 
+  "memory": "512",
+  "family": "echo-task",
+  "networkMode": "awsvpc",
+  "cpu": "256"
+}
