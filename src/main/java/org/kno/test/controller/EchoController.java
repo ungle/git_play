@@ -33,6 +33,14 @@ public class EchoController {
 		return body;
 	}
 	
+	@GetMapping("/bye")
+	public String bye() {
+		MDC.put("trace", UUID.randomUUID().toString());
+		log.info("bye bye to client!");
+		MDC.clear();
+		return "see you again!";
+	}
+	
 	
 
 }
