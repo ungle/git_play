@@ -45,7 +45,7 @@ jobs:
       with:
         images: ${{ env.REGISTRY }}/${{ github.actor }}/${{ env.IMAGE_NAME }}
         tags: type=semver,pattern={{version}}
-        flavour: latest=false
+        flavor: latest=false
               
     - name: Build and push Docker image
       uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
