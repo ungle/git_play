@@ -18,6 +18,9 @@
       "cpu": 256,
       "memory": 512,
       "image": "ghcr.io/ungle/echotester:1.0.0",
+      "repositoryCredentials": {
+        "credentialsParameter": "arn:aws:secretsmanager:ap-southeast-1:764662207885:secret:ghcr-rAST70"
+      },
       "essential": true,
       "name": "echo-tester"
     }

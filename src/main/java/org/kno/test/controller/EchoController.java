@@ -1,5 +1,8 @@
 package org.kno.test.controller;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.UUID;
 
 import org.slf4j.Logger;
@@ -39,6 +42,15 @@ public class EchoController {
 		log.info("bye bye to client!");
 		MDC.clear();
 		return "see you again!";
+	}
+	
+	@GetMapping("/say-today")
+	public String sayToday() {
+		MDC.put("trace", UUID.randomUUID().toString());
+		String nowDate = DateTimeFormatter.ISO_DATE.format(LocalDateTime.now());
+		log.info("say: {}",nowDate);
+		MDC.clear();
+		return String.format("Today is %s", nowDate);
 	}
 	
 	
