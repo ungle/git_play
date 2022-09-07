@@ -25,6 +25,8 @@
   "requiresCompatibilities": [
       "FARGATE"
    ], 
+  "ipcMode": null,
+  "executionRoleArn": "arn:aws:iam::764662207885:role/ecsTaskExecutionRole",
   "memory": "512",
   "family": "echo-task",
   "networkMode": "awsvpc",
