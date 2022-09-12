@@ -4,4 +4,4 @@ def test_hello():
 	assert r.text == "hello!"
 def test_bye():
 	r = requests.get("http://52.77.244.25:9099/bye")
-	assert r.text == "bye!"
+	assert r.text == "see you again!"
