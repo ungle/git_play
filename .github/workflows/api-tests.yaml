@@ -1,8 +1,9 @@
 name: api testing
 
 on:
-  schedule:
-    - cron:  '30 11 * * *'
+  push:
+    branches:
+    - test*
 jobs:
   api-test:
     runs-on: ubuntu-latest
