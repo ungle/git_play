@@ -75,6 +75,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-southeast-1
         role-to-assume: arn:aws:iam::764662207885:role/OrganizationAccountAccessRole
+        role-duration-seconds: 1200
         
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-render
